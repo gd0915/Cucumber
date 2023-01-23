@@ -16,12 +16,11 @@ Feature: first feature file
     Then close the application
 
 
-#  Feature file is used to create test cases.
 #  All feature files must begin with "Feature:" keyword
 #  Feature : Declare the file is a feature file. Mandatory. There can be ONLY one Feature: keyword
 #  Scenario : To create test case. In a feature file there may be more than one Scenario:
 #  Runner : To run the feature files.
-#  Background : Used to run before each scenario. This is used for repeated pre-conditions.
+#  Background : Used to run before each scenario. THos is used for repeated pre-conditions.
 #  CUCUMBER STEPS
 #  1. create feature file and test scenarios
 #  2. run the feature file and generate step definitions. dryRun=true
