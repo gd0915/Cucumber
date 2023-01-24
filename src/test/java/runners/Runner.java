@@ -6,15 +6,23 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
+        monochrome=true,
         features = "src/test/resources/features",
         glue = "stepdefinitions",
         dryRun = false,
-        tags = "@parameterizing1"
+        tags = "@data_tables"
 
 )
 
 public class Runner {
 }
+
 /*
  features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
  glue = "stepdefinitions", //PATH OF STEP DEFINITIONS
@@ -33,4 +41,9 @@ tags : this marks which feature file to run. We add this tag in the feature file
 When you run Runner, it will go to feature file, and start execution from top to bottom.
 If there is any step matching, Java will find that matching 'step definition', and it will be executed.
 If there is no match then Cucumber will generate template for us in the console.
+ */
+
+/*
+To open HTML report right click / Open in / Browser / Chrome
+For Cucumber and Json reports we just double click and open in IntelliJ
  */
