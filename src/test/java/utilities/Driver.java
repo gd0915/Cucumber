@@ -28,7 +28,7 @@ public class Driver {
 
     private Driver() {
 
-        //we don't want to create another abject. Singleton pattern
+        //we don't want to create another object. Singleton pattern
     }
 
     //to initialize the driver we create a static method
