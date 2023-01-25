@@ -1,47 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.366" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="blue_rental_data_tables" name="US167854_manager_login_test - test_data - Example #1.1" time="5.726">
+<testsuite name="Cucumber" time="10.942" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_" time="10.69">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:45)
+	at ✽.verify the next page url contains login keyword(file:///C:/Users/Admin/IdeaProjects/my-cucumber-project/src/test/resources/features/day26_failed_test_cases.feature:9)
+]]>
+</failure>
 <system-out><![CDATA[
-Given user is on blue rental home page......................................passed
-And user click on login link................................................passed
-And user enters user name "sam.walker@bluerentalcars.com"...................passed
-And user enters password "c!fas_art"........................................passed
-When click on login button..................................................passed
-Then verify login is successful.............................................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="blue_rental_data_tables" name="US167854_manager_login_test - test_data - Example #1.2" time="3.827">
-<system-out><![CDATA[
-Given user is on blue rental home page......................................passed
-And user click on login link................................................passed
-And user enters user name "kate.brown@bluerentalcars.com"...................passed
-And user enters password "tad1$Fas".........................................passed
-When click on login button..................................................passed
-Then verify login is successful.............................................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="blue_rental_data_tables" name="US167854_manager_login_test - test_data - Example #1.3" time="3.152">
-<system-out><![CDATA[
-Given user is on blue rental home page......................................passed
-And user click on login link................................................passed
-And user enters user name "raj.khan@bluerentalcars.com".....................passed
-And user enters password "v7Hg_va^".........................................passed
-When click on login button..................................................passed
-Then verify login is successful.............................................passed
-Then close the application..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="blue_rental_data_tables" name="US167854_manager_login_test - test_data - Example #1.4" time="5.494">
-<system-out><![CDATA[
-Given user is on blue rental home page......................................passed
-And user click on login link................................................passed
-And user enters user name "pam.raymond@bluerentalcars.com"..................passed
-And user enters password "Nga^g6!"..........................................passed
-When click on login button..................................................passed
-Then verify login is successful.............................................passed
-Then close the application..................................................passed
+Given user is on "https://www.bluerentalcars.com/login" page................passed
+And user enters customer_email and customer_password........................passed
+Then verify the next page url contains login keyword........................failed
 ]]></system-out>
 </testcase>
 </testsuite>

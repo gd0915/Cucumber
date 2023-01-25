@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
         },
         monochrome=true,
         features = "src/test/resources/features",
-        glue = "stepdefinitions",
+        glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@blue_rental"
+        tags = "@failed_tests"
 
 )
 
@@ -46,4 +46,18 @@ If there is no match then Cucumber will generate template for us in the console.
 /*
 To open HTML report right click / Open in / Browser / Chrome
 For Cucumber and Json reports we just double click and open in IntelliJ
+ */
+
+/*
+      ***Scenario Outline:***
+What is it?
+It is used to run the same scenario with different data multiple times
+It must be followed by an Examples keyword. Examples keyword is used to pass data
+Scenario Outline is used for parametrizating of the feature files
+It is used to pass test data dynamically
+This is very common and use ful in cucumber
+
+     ***Cucumber reports plugins***
+We can easily generate cucumber reports using report plugins in the runner
+We can generate different reports such as HTML, json, and xml; but the most common one is the HTML report
  */

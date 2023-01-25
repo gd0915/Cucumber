@@ -44,4 +44,9 @@ public class BlueRentalStepDefinitions {
         Assert.assertTrue(blueRentalHomePage.userID.isDisplayed());
     }
 
+//    @Then("verify the next page url contains login keyword")
+//    public void verify_the_next_page_url_contains_login_keyword() {
+//        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("login"));
+//    }
+
 }
