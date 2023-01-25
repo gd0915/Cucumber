@@ -42,6 +42,7 @@ public class LoginStepDefinitions {
     @Then("verify the next page url contains login keyword")
     public void verify_the_next_page_url_contains_login_keyword() {
         ReusableMethods.waitFor(5);
+//        BELOW ASSERTION FAILS
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("login"));
     }
     // We do this on purpose, so that the test case fails, and we get the screenshot with the help of Hook (after method)
