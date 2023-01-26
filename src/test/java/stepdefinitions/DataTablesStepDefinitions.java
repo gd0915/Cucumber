@@ -9,8 +9,8 @@ public class DataTablesStepDefinitions {
     DataTablesPage dataTablesPage = new DataTablesPage();
 
     @Given("user is on {string} page")
-    public void user_is_on_page(String string) {
-        Driver.getDriver().get(string);
+    public void user_is_on_page(String url) {
+        Driver.getDriver().get(url);
     }
     @Given("user clicks on the new button")
     public void user_clicks_on_the_new_button() {
