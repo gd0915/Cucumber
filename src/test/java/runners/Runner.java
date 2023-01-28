@@ -10,19 +10,21 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt"
         },
         monochrome=false,
         features = "src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},     // When we have multiple data we use curly braces and comma between tags. If we have single, we only use "" double-quotes
+        glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@MedunnaRoom"
+        tags = "@failed_tests"
 
 )
 
 public class Runner {
 }
 
+// glue = {"stepdefinitions", "hooks"},     ==>> When we have multiple data we use curly braces and comma between tags. If we have single, we only use "" double-quotes
 /*
  features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
  glue = "stepdefinitions", //PATH OF STEP DEFINITIONS
@@ -60,4 +62,9 @@ This is very common and use ful in cucumber
      ***Cucumber reports plugins***
 We can easily generate cucumber reports using report plugins in the runner
 We can generate different reports such as HTML, json, and xml; but the most common one is the HTML report
+ */
+
+/*
+NOTE: "rerun:target/failedRerun.txt"
+This is going to generate text file if something fails
  */
