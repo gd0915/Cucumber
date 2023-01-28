@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         monochrome=false,
         features = "src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},
+        glue = {"stepdefinitions", "hooks"},     // When we have multiple data we use curly braces and comma between tags. If we have single, we only use "" double-quotes
         dryRun = false,
         tags = "@MedunnaRoom"
 
@@ -45,7 +45,7 @@ If there is no match then Cucumber will generate template for us in the console.
 
 /*
 To open HTML report right click / Open in / Browser / Chrome
-For Cucumber and Json reports we just double click and open in IntelliJ
+For Cucumber and Json reports we just double-click and open in IntelliJ
  */
 
 /*
@@ -53,7 +53,7 @@ For Cucumber and Json reports we just double click and open in IntelliJ
 What is it?
 It is used to run the same scenario with different data multiple times
 It must be followed by an Examples keyword. Examples keyword is used to pass data
-Scenario Outline is used for parametrizating of the feature files
+Scenario Outline is used for parameterization of the feature files
 It is used to pass test data dynamically
 This is very common and use ful in cucumber
 

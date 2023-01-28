@@ -31,6 +31,6 @@ Feature: first feature file
 #     QUESTIONS:
 #  1. Does spelling important in FF and Step defs? YES
 #  2. Does order of steps in Feature file matters? YES
-#   Because tests are run from TOP to BUTTOM in the feature file
+#   Because tests are run from TOP to BOTTOM in the feature file
 #  3. Does order of step definitions on step definitions folder matters? NO
 #   Because the tests run based of the steps NOT BASED ON THE STEP DEFINITIONS

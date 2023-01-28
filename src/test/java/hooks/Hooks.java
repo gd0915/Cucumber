@@ -10,13 +10,17 @@ import utilities.Driver;
 public class Hooks {
     /*
     Hooks is used to run before and after each SCENARIO
+    i.g. If feature file has 2 scenario, Hooks will be run 2 times. It is based on the Scenario.
+    To be able to run the Hooks class, we use 'glue' tag in Runner class, put "hooks" as parameter
+    By putting specific tag like @After("@browser and not @headless") we can put a condition to run the Hooks class => Conditional hooks
      */
-    @Before
+    @Before //comes from cucumber.java(not JUnit)
     public void setUpScenario(){
 //        System.out.println("Before Method");
     }
 
 
+    //This after method will understand automatically if the scenario is passed, skipped, or failed(like Listeners in TestNG)
     @After
     public void tearDownScenario(Scenario scenario){
 //        System.out.println("After Method");
@@ -41,3 +45,18 @@ public class Hooks {
     }
 
 }
+/*
+Hooks is just a Java class, but is a special class. It is running 'before' or especially 'after' each Scenario.
+After method is usually used to capture screenshot.
+Like a TestBase class.
+Hooks is specific for Cucumber.
+We can put the code that we want to run before and after each Scenario.
+ */
+
+/*
+Why do we use Hooks class in our framework?
+We use hooks class to generate the reports with screenshot.
+My after method especially helpful to capture screenshot when a Scenario fails automatically.
+What is in it?
+It has Before and After methods. I have reports method to capture the screenshot
+ */
