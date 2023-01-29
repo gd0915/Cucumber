@@ -1,5 +1,6 @@
-Feature: excel_login_feature
 @excel_customer_login
+Feature: excel_login_feature
+
   Scenario: TC_customer_credentials_test
     Given user tries to login as "customer_info"
     Then verify login is successful
@@ -12,7 +13,7 @@ Feature: excel_login_feature
     Then verify login is successful
     Then capture the screenshot
     Then close the application
-#
+
 
 
 
