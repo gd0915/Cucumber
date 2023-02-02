@@ -1,0 +1,13 @@
+JDBC NOTES:
+1. JDBC is an API to work with databases
+   JDBC = Java Database Connectivity
+
+2. Add Database Utilities Class in utilities folder
+
+3. Add driver(dependency) for post gre sql database
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.0</version>
+        </dependency>
