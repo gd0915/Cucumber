@@ -5,7 +5,7 @@ STEPS:
 1. Create a folder on the Desktop : SeleniumServer
 2. *Download Selenium Server: https://www.selenium.dev/downloads/
    *Download Chrome Driver  : https://chromedriver.chromium.org/downloads
-   *Download Firefox Driver : https://github.com/mozilla/geckodriver/releases
+   *Download Firefox Driver : https://github.com/mozilla/geckodriver/releases (This works : //https://github.com/mozilla/geckodriver/releases/tag/v0.31.0)
 NOTE: Make sure the selenium server and drivers are UNZIPPED and in the SeleniumServer folder
 -------To run grid do step 3 and 4-----
 3. Open your Terminal or CMD and change the directory to SeleniumServer folder
@@ -252,3 +252,32 @@ public class GridStepDefinitions {
 4. What is Node?
     Node is a virtual machine. We can create multiple nodes using hub.
     java -jar selenium-server-4.8.0.jar node
+
+=============================================
+Self-Notes:
+* Selenium Grid is a specific way to test the applications.
+* It is used for running test cases in a remote WebDriver(environment)(remote Chrome or Firefox driver)
+* Selenium Grid is also used for Cross Browser Testing to make sure the application/test cases works the same in Firefox, Chrome driver, Edge.
+* In TestNG, we can do parallel and cross browser testing with xml files.
+* In Cucumber there are alternative ways to do cross browser testing. Selenium Grid one of the easiest way to do it.
+* Selenium grid can be configured to run test cases in different browser(firefox, chrome, edge)
+* In Selenium 4, we have 3 ways to use Selenium grid. We have standalone server. It is enough to run test cases in different browsers..
+* In Selenium 3, it is used desired capabilities to use selenium grid.(only 1 way)
+* Hub and Node are also remote server that we can run our test cases remotely. But standalone is preferable.
+* Hub is like a actual server and nodes are kind of small computers each runs one test case by itself.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

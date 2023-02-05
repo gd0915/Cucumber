@@ -37,7 +37,7 @@ public class GridStepDefinitions {
     }
     @Given("user is on the application_url using firefox")
     public void user_is_on_the_application_url_using_firefox() throws MalformedURLException {
-//        RUNNING MY TEST CASE ON A REMOTE MACHINE(SELENIUM GRID) USING CHROME
+//        RUNNING MY TEST CASE ON A REMOTE MACHINE(SELENIUM GRID) USING FIREFOX
 //        Selenium Grid URL
         URL remoteURL = new URL("http://10.0.0.27:4444");
 //        Create RemoteWebDriver
@@ -50,7 +50,7 @@ public class GridStepDefinitions {
 
     @Given("user is on the application_url using edge")
     public void user_is_on_the_application_url_using_edge() throws MalformedURLException {
-//        RUNNING MY TEST CASE ON A REMOTE MACHINE(SELENIUM GRID) USING CHROME
+//        RUNNING MY TEST CASE ON A REMOTE MACHINE(SELENIUM GRID) USING EDGE
 //        Selenium Grid URL
         URL remoteURL = new URL("http://10.0.0.27:4444");
 //        Create RemoteWebDriver

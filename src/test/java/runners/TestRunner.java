@@ -36,15 +36,19 @@ and add required failsafe, surefire, cucumber reporting plugins/dependencies in 
 /*
 Did you do parallel testing in you project?
 Yes I did.
+
 How do you parallel testing?
+
 1. Create Multiple runner : SmokeTestRunner, RegressionTestRunner, AddtocartTestRunner
-These classes have different tags so they run different test cases
+These classes have different tags, so they run different test cases
+
 2. Add required plug ins
 Surefire:Runs the test cases in parallel mode. tread-count is given here
 Failsafe: If test case fails, continue to run others tests safely
 Cucumber reporting : used to generate extra detailed html reports
+
 3. Run using maven commands from the terminal, CMD,…
-mvn clean verify, man clean install
+mvn clean verify, mvn clean install
 What are the required plugin for parallel?
 maven failsafe(safe run even after some test failure), maven surefire(For parallel testing-thread count is in this plugin), and maven cucumber reporting(generation reports)
 When did you do parallel testing?

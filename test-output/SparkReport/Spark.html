@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan. 29, 2023 12:36:53 p.m.</span></a>
+<a href="#"><span class="badge badge-primary">Feb. 4, 2023 08:24:59 p.m.</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan. 29, 2023 12:36:53 p.m.</h3>
+<h3>Feb. 4, 2023 08:24:59 p.m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan. 29, 2023 12:37:06 p.m.</h3>
+<h3>Feb. 4, 2023 08:25:12 p.m.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"hooks_test":11.547
+"hooks_test":11.455
 };
 </script>
 <div class="row">
@@ -256,7 +256,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">hooks_test</p>
             <p class="text-sm">
-              <span>12:36:54 p.m.</span> / <span>00:00:11:547</span>
+              <span>8:25:00 p.m.</span> / <span>00:00:11:455</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -265,9 +265,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">hooks_test</h5>
-<span class='badge badge-success'>01.29.2023 12:36:54 p.m.</span>
-<span class='badge badge-danger'>01.29.2023 12:37:06 p.m.</span>
-<span class='badge badge-default'>00:00:11:547</span>
+<span class='badge badge-success'>02.04.2023 8:25:00 p.m.</span>
+<span class='badge badge-danger'>02.04.2023 8:25:12 p.m.</span>
+<span class='badge badge-default'>00:00:11:455</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -302,10 +302,29 @@ eventsCount: 5,
               <div class="step fail-bg" title="stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword()">
                 <span>Then verify the next page url contains login keyword</span>
       <div>
-        <textarea disabled class="code-block">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=109.0.5414.120)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c98b1a904897dca02a420f7dfcfec71, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52556}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52556/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c98b1a904897dca02a420f7dfcfec71
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:946)
+	at utilities.Driver.getDriver(Driver.java:57)
 	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:51)
 	at ✽.verify the next page url contains login keyword(file:///C:/Users/Admin/IdeaProjects/my-cucumber-project/src/test/resources/features/day26_failed_test_cases.feature:9)
 </textarea>
@@ -314,7 +333,7 @@ eventsCount: 5,
               </div>
               <div class="step pass-bg" title="AFTER">
                 <span>hooks.Hooks.tearDownScenario(io.cucumber.java.Scenario)</span>
-      <div>failed_scenario
+      <div>failed_scenarioTC_01_test
           <div class="row mb-3"><div class="col-md-3">
 <img data-featherlight='../embedded1.png' src="../embedded1.png">
     
@@ -370,7 +389,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:36:54 p.m.</td>
+<td>20:25:00 p.m.</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>TC_01_test</a>
 <div class="">
@@ -403,12 +422,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
+<p class="name">org.openqa.selenium.WebDriverException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
+<h4>org.openqa.selenium.WebDriverException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -422,7 +441,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>12:37:00 p.m.</td>
+<td>20:25:05 p.m.</td>
 <td>
 <a href="#" class="linked" test-id='1' id='6'>Then verify the next page url contains login keyword</a>
 <div class="">

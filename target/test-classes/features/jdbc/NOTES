@@ -4,10 +4,42 @@ JDBC NOTES:
 
 2. Add Database Utilities Class in utilities folder
 
-3. Add driver(dependency) for post gre sql database
+3. Our application use postgresql server(Database)
+
+   Add driver(dependency) for post gre sql database
+
 <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.5.0</version>
         </dependency>
+
+* We use sql queries to retrieve data from the database either manual and also in automation.
+* There are different databases like Oracle, Microsoft Mysql, postgresql..etc
+* There are different tools to retrieve data from database and  we can use them for manual testing. postgresql, sql developer, etc...
+* For automation we additionally use JDBC.
+
+
+*  How to use JDBC
+1. Connect Database
+• connection=DriverManager.getConnection(“url”, “username”, “password”);
+2.Send query and get data
+• statement=connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+ResultSet.CONCUR_READ_ONLY);
+3. Used the queries in the test cases for assertions
+• resultSet = statement.executeQuery("SELECT * FROM Book;”);
+• String expectedResult = resultSet.getString(“BookName”);
+• Assert.assertEquals(expectedResult, actualResult);
+
+* Every Database has schema.
+* The tables are connected by primary keys and foreign(secondary) keys.
+* Testers use schema to write the queries and connect to the right tables and columns.
+
+* In our framework, we use Database Utilities Class.
+    This utilities class is in the utilities folder. The reason is to keep the test classes clean avoid repetition
+    This class has reusable methods, similar to Driver or Test Base class
+    For example, we have createConnection() method in this class. We can call this class whenever we need.
+
+
+

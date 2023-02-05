@@ -13,6 +13,8 @@ public class Hooks {
     i.g. If feature file has 2 scenario, Hooks will be run 2 times. It is based on the Scenario.
     To be able to run the Hooks class, we use 'glue' tag in Runner class, put "hooks" as parameter
     By putting specific tag like @After("@browser and not @headless") we can put a condition to run the Hooks class => Conditional hooks
+    When we add Hooks to our runner it will generate report automatically and plus it will take screenshot if something fails.
+    Run from runner class. It will generate HTML report and screenshot under "Target -> xml-report -> default-cucumber-reports.html" => right click and open in browser
      */
     @Before //comes from cucumber.java(not JUnit)
     public void setUpScenario(){
@@ -26,12 +28,12 @@ public class Hooks {
 //        System.out.println("After Method");
         if(scenario.isFailed()){//capturing the screenshot when a scenario fails and attaching to the report
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(failedScreenshot, "image/png", "failed_scenario");
+            scenario.attach(failedScreenshot, "image/png", "failed_scenario"+scenario.getName()+"");
             Driver.closeDriver();
         }
     }
 
-//    This Before hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
+//    This Before hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS ==>> Conditional Hooks
 //    @Before(value = "@smoke_tests")
     @Before("@smoke_tests")
     public void setUpSmokeScenarios(){

@@ -170,7 +170,7 @@ Feature: excel_login_feature
 
 3. NOTE: We copied existing java code from testNG
    Because Java sections are the same
-   We also copied som eof the page objects from testNG project
+   We also copied some of the page objects from testNG project
    Because we are using POM and same website
 
  */

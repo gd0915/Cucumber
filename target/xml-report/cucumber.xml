@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.787" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="grid_feature" name="TC01_running_tests_on_Chrome" time="6.922">
+<testsuite name="Cucumber" time="11.761" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_test" time="11.525">
+<failure type="org.openqa.selenium.WebDriverException" message="unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=109.0.5414.120)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c98b1a904897dca02a420f7dfcfec71, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52556}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52556/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c98b1a904897dca02a420f7dfcfec71">
+<![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=109.0.5414.120)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c98b1a904897dca02a420f7dfcfec71, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52556}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52556/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c98b1a904897dca02a420f7dfcfec71
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:946)
+	at utilities.Driver.getDriver(Driver.java:57)
+	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:51)
+	at ✽.verify the next page url contains login keyword(file:///C:/Users/Admin/IdeaProjects/my-cucumber-project/src/test/resources/features/day26_failed_test_cases.feature:9)
+]]>
+</failure>
 <system-out><![CDATA[
-Given user is on the application_url using chrome...........................passed
-Then verify the page title contains "Techpro Education".....................passed
-Then close the remote driver................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="grid_feature" name="TC02_running_tests_on_Firefox" time="6.807">
-<system-out><![CDATA[
-Given user is on the application_url using firefox..........................passed
-Then verify the page title contains "Techpro Education".....................passed
-Then close the remote driver................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="grid_feature" name="TC03_running_tests_onEdge" time="4.817">
-<system-out><![CDATA[
-Given user is on the application_url using edge.............................passed
-Then verify the page title contains "Techpro Education".....................passed
-Then close the remote driver................................................passed
+Given user is on "https://www.bluerentalcars.com/login" page................passed
+And user enters customer_email and customer_password........................passed
+Then verify the next page url contains login keyword........................failed
 ]]></system-out>
 </testcase>
 </testsuite>

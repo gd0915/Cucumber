@@ -2,8 +2,11 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import utilities.DBUtils;
 import java.sql.SQLException;
+import java.util.List;
+
 public class DatabaseStepDefinitions {
     @Given("user connects to the application database")
     public void user_connects_to_the_application_database() {
@@ -19,7 +22,7 @@ public class DatabaseStepDefinitions {
     }
     @Then("user reads all the column {string} data")
     public void user_reads_all_the_column_data(String column) throws Exception {
-//        Using result set, get teh objects from the database
+//        Using result set, get the objects from the database
         DBUtils.getResultset().next();//going to the next row
         Object object1 = DBUtils.getResultset().getObject(column);//getObject is used to get the database objects
         System.out.println(object1);
@@ -47,6 +50,22 @@ public class DatabaseStepDefinitions {
         System.out.println("Row Count : "+rowNum);
         System.out.println("Row Count : "+DBUtils.getRowCount());
 
+    }
+
+    @Then("verify table {string} and column {string} contains data {string}")
+    public void verify_table_and_column_contains_data(String table, String column, String data) {
+//      getting to the table
+        String query = "SELECT "+column+" FROM "+table;
+
+//      getting all the column data and storing in a list
+        List<Object> columnData = DBUtils.getColumnData(query,column);
+        System.out.println(columnData);
+        Assert.assertTrue(columnData.contains(data));
 
     }
+
+
+
+
+
 }
