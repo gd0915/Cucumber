@@ -42,8 +42,22 @@ Plugins: Provides a feature that is limited. It provides the extra functionality
 For example, surefire-plugin enables parallel execution during the test execution.
 
 
+**************************** REPORTS IN CUCUMBER ***************************
+==>> What are different ways to get reports in cucumber?
+ i) With cucumber plugins in the runner class. No need to add any dependency. Normally this set up is good enough
+    Html,json,xml
+ ii) Extent Spark reports: We use cucumber spark adaptors to get more advanced reports
+        Add dependencies
+        Add configuration files
 
-****************************SPARK REPORTS*********************************
+==>> How to attach a screenshot in the html report?
+In my framework, I have Hooks class. In @after method class I have getScreenShotAs method.
+It captures and attaches the screenshot when a test case fails.
+In addition to this automatic screenshot setup, I have another method(capture the screenshot) that I run ANYTIME to capture the screenshot.
+I use this at the end of assertions as a proof of test execution
+
+
+**************************** SPARK REPORTS *********************************
 1. Create extent-config.xml  under resources folder
 2. Create extent.properties  under resources folder
 3. Add dependencies in pom.xml https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter/1.6.0
