@@ -20,8 +20,14 @@ import org.junit.runner.RunWith;
 public class DBRunners {
 }
 
+//GMI Bank credentials
 
 //https://www.gmibank.com/
-//CWoburn
-//Cw192837?     Go Administration--->User Management
+//Admin
+//username : CWoburn
+//password : Cw192837?     Go Administration--->User Management
+
+//Customer
+//username : gino.wintheiser
+//password : %B6B*q1!TH
 

@@ -1,45 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="11.761" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_test" time="11.525">
-<failure type="org.openqa.selenium.WebDriverException" message="unknown error: failed to change window state to 'normal', current state is 'maximized'
-  (Session info: chrome=109.0.5414.120)
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5c98b1a904897dca02a420f7dfcfec71, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52556}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52556/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5c98b1a904897dca02a420f7dfcfec71">
-<![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to change window state to 'normal', current state is 'maximized'
-  (Session info: chrome=109.0.5414.120)
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5c98b1a904897dca02a420f7dfcfec71, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52556}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52556/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5c98b1a904897dca02a420f7dfcfec71
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:946)
-	at utilities.Driver.getDriver(Driver.java:57)
-	at stepdefinitions.LoginStepDefinitions.verify_the_next_page_url_contains_login_keyword(LoginStepDefinitions.java:51)
-	at ✽.verify the next page url contains login keyword(file:///C:/Users/Admin/IdeaProjects/my-cucumber-project/src/test/resources/features/day26_failed_test_cases.feature:9)
-]]>
-</failure>
+<testsuite name="Cucumber" time="24.75" tests="14" skipped="0" failures="0" errors="0">
+<testcase classname="db_customer_testing" name="TC01_read_customer_ssn_info" time="3.155">
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-And user enters customer_email and customer_password........................passed
-Then verify the next page url contains login keyword........................failed
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then user reads all the column "login" data.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="4.245">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then user reads all the column "first_name" data............................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC03_read_customer_firstname_info" time="2.988">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_customer".......................passed
+Then user reads all the column "email" data.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC04_read_customer_account_types" time="1.871">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then user reads all the column "account_type" data..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.1" time="2.479">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "CREDIT_CARD".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.2" time="0.758">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "SAVING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.3" time="0.617">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "CHECKING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.4" time="0.585">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "INVESTING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.1" time="0.64">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "anonymoususer".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.2" time="1.568">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "chantay.grant".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.3" time="2.013">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "tyron.towne".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_emails_created - account_types - Example #1.1" time="2.105">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "breanna.ryan@yahoo.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_emails_created - account_types - Example #1.2" time="0.661">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "cuppptan@gmail.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_emails_created - account_types - Example #1.3" time="0.673">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "jordy.lynch@hotmail.com".passed
 ]]></system-out>
 </testcase>
 </testsuite>

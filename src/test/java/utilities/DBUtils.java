@@ -106,7 +106,7 @@ public class DBUtils {
     /**
      * @return returns a single cell value. If the results in multiple rows and/or
      *         columns of data, only first column of the first row will be returned.
-     *         The rest of the data will be ignored
+     *         The rest of the data will be ignored (If there is multiple match this method will return only the first match)
      */
     public static Object getCellValue(String query) {
         return getQueryResultList(query).get(0).get(0);
@@ -114,7 +114,7 @@ public class DBUtils {
     /**
      * @return returns a list of Strings which represent a row of data. If the query
      *         results in multiple rows and/or columns of data, only first row will
-     *         be returned. The rest of the data will be ignored
+     *         be returned. The rest of the data will be ignored(This method will return all the matches)
      */
     public static List<Object> getRowList(String query) {
         return getQueryResultList(query).get(0);
