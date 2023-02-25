@@ -1,5 +1,6 @@
 package hooks;
 
+import base_urls.MedunnaBaseUrl;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -46,7 +47,20 @@ public class Hooks {
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
 
+    //This will run before Api test
+    @Before("@TC01_Api")
+    public void beforeApi(){
+        MedunnaBaseUrl.medunnaSetUp();
+    }
+
+
 }
+
+
+
+
+
+
 /*
 Hooks is just a Java class, but is a special class. It is running 'before' or especially 'after' each Scenario.
 After method is usually used to capture screenshot.

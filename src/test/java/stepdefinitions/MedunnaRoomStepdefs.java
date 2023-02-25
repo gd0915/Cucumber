@@ -53,8 +53,9 @@ public class MedunnaRoomStepdefs {
     public void enterInPriceInput(String price) {
         ReusableMethods.waitFor(1);
         medunnaRoomPage.roomPriceInput.sendKeys(price);
-    }
 
+    }
+    
     @And("enter {string} in Description input")
     public void enterInDescriptionInput(String description) {
         ReusableMethods.waitFor(1);
