@@ -85,6 +85,7 @@ public class RoomCreation {
 
         //4. Validation
         //We commented out this validation because 4 and 5 works with different jsonIgnore properties
+        // To run validation 4 ==>> JsonIgnoreProperties should be imported from ==>> "import com.fasterxml.jackson.annotation.JsonIgnoreProperties;"
 //        Room actualDataPojo = response.as(Room.class);
 //        System.out.println("Actual Data = "+ actualDataPojo);
 //
@@ -105,10 +106,6 @@ public class RoomCreation {
         assertEquals(expectedData.getDescription(), actualRoom.getDescription());
 
 
-
     }
-
-
-
 
 }

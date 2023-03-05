@@ -19,17 +19,31 @@ public class DBUtils {
     /**
      * DBUtils.createConnection(); -> to connect to the database
      */
+//    public static void createConnection() {
+//        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
+//        String username="techprodb_user";
+//        String password="Techpro_@126";
+//        try {
+//            connection = DriverManager.getConnection(url, username, password);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
+
     public static void createConnection() {
-        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
-        String username="techprodb_user";
-        String password="Techpro_@126";
+        String url = "jdbc:postgresql://MEDUNNA.COM:5432/medunna_db_v2";
+        String username="select_user";
+        String password="Medunna_pass_@6";
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
+        System.out.println("Connection Success");
     }
+
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      * STATEMENT : is used to write query
@@ -64,6 +78,7 @@ public class DBUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("Connection closed");
     }
     public static Connection getConnection() {
         String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=crystalkeyhotels2;user=Ahmet_User;password=Ahmet123!";
