@@ -5,8 +5,8 @@ Feature: Medunna Room Creation
     Given user is on "https://medunna.com" page
     When click on user icon
     And click on Sign In option
-    And enter "john_doe" in username input
-    And enter "John.123" in password input
+    And enter "AdminTeam01" in username input
+    And enter "Team01+" in password input
     And click on Remember Me check box
     And click on Sign In submit button
 
